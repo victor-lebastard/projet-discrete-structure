@@ -7,10 +7,17 @@ import re
 #    #r = 
 #    return r
 
-# def fertiliser(an, ap, bn, bp, n, p):
-#    # a = 
-#    # b = 
-#    return a, b
+ def fertiliser(an, ap, bn, bp, n, p):
+   det=an*bp-ap*bn
+   if det==0:
+      return None
+   else:
+      mat=np.array([[an,bn],[ap,bp]])
+      vector=np.array([[n],[p]])
+      amswer=np.linalg.inv(mat)@vector
+      a=answer[[0]]
+      b=answer[[1]]
+      return a, b
 
 # def makeBet(headsOdds, tailsOdds, previousOutcome, state):
 #  # bet =
