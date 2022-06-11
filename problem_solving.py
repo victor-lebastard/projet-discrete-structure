@@ -3,9 +3,17 @@ import re
 
 # Uncomment and implement two of the following.  Refer to the Problem solving brief for specifications.
 
-# def censor(s):
-#    #r = 
-#    return r
+def censor(s):
+    words=s.split(" ")
+    l=len(words)
+    print(words)
+    print(l)
+    for i in range(l):
+        if re.match(words[i],'a') or re.match(words[i],'an') or re.match(words[i],'the') :
+            print('on est la')
+            words[i]=len(words[i])*'#'
+    r=" ".join(words)
+    return r
 
  def fertiliser(an, ap, bn, bp, n, p):
    det=an*bp-ap*bn
